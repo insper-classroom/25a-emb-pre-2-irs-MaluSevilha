@@ -25,9 +25,9 @@ int main() {
 
   while (true) {
     if(g_but_flag){
+      g_but_flag = 0;
       led_status = !led_status;
       gpio_put(LED_PIN, led_status);
-      g_but_flag = 0;
     }
   }
 }
