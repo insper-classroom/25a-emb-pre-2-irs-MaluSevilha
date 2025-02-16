@@ -21,7 +21,7 @@ int main() {
   gpio_set_dir(BTN_PIN, GPIO_IN);
   gpio_pull_up(BTN_PIN);
   gpio_set_irq_enabled_with_callback(
-    BTN_PIN, GPIO_IRQ_EDGE_RISE, true, &btn_callback);
+    BTN_PIN, GPIO_IRQ_EDGE_FALL, true, &btn_callback);
 
   while (true) {
     if(g_but_flag){
