@@ -41,7 +41,7 @@ int main() {
   gpio_init(BTN_PIN_G);
   gpio_set_dir(BTN_PIN_G, GPIO_IN);
   gpio_pull_up(BTN_PIN_G);
-  gpio_set_irq_enabled(BTN_PIN_G, GPIO_IRQ_EDGE_FALL, true);
+  gpio_set_irq_enabled(BTN_PIN_G, GPIO_IRQ_EDGE_RISE, true);
   
   while (true) {
     if(red_flag){
